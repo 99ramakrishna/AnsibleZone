@@ -1,0 +1,15 @@
+---
+- hosts: all
+  become: yes
+  gather_facts: yes
+  tasks:
+   # - name: Install git on redhat
+    - yum:
+         name: git
+         state: present
+         when: ansible_os_family == "RedHat"
+    - name: install gitn on debian
+      apt:
+        name: git
+        state: present
+        when: ansible_os_family == "Debian"

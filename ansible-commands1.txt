@@ -1,0 +1,237 @@
+    1  yum update
+    2  sudo yum update
+    3  yum install sudo -y
+    4  sudo yum install sudo -y
+    5  exit
+    6  sudo yum install vim curl -y
+    7  yum install telnet net-tools -y
+    8  sudo yum install telnet net-tools -y
+    9  ssh-keygen 
+   10  ssh-copy-id ansible@172.31.35.78
+   11  ssh 172.31.35.78
+   12  sudo yum update
+   13  sdo -i
+   14  sudo -i
+   15  ansible -m ping all
+   16  exit
+   17  ssh-copy-id ansible@localhost
+   18  ansible -m ping -i /etc/ansible/hosts all
+   19  exit
+   20  vim tomcat-server.yml
+   21  ansible -m ping all
+   22  ansible-playbook tomcat-server.yml 
+   23  vim tomcat-server.yml
+   24  exit
+   25  vim /etc/
+   26  vim /etc/ansible/hosts 
+   27  exit
+   28  su -
+   29  vim tomcat-server.yml
+   30  ansible-playbook tomcat-server.yml 
+   31  vim tomcat-server.yml
+   32  ansible-playbook tomcat-server.yml 
+   33  ansible-playbook tomcat-server.yml --limit tomcat-server.retry 
+   34  ansible-playbook --limit tomcat-server.retry 
+   35  ansible-playbook tomcat-server.yml 
+   36  vim tomcat-server.yml
+   37  ansible-playbook tomcat-server.yml 
+   38  vim tomcat-server.yml
+   39  ansible-playbook tomcat-server.yml 
+   40  ssh ip-172-31-88-89.ec2.internal
+   41  ssh ansible@172-31-88-89 
+   42  ssh ip-172-31-88-89.ec2.internal
+   43  ssh ansible@localhost
+   44  ssh ip-172-31-88-89.ec2.internal
+   45  ssh-keygen -t rsa
+   46  ssh-copy-id ansible@172-31-88-89
+   47  ssh-copy-id ansible@ip-172-31-88-89.ec2.internal
+   48  ssh ip-172-31-88-89.ec2.internal
+   49  sudo yum install lsb
+   50  hostname
+   51  \
+   52  su -
+   53  ansible -m ping all
+   54  ssh ansible@172-31-88-89
+   55  ssh ansible@
+   56  ssh ansible@172-31-88-89
+   57  sudo systemctl restart sshd
+   58  ssh ansible@172-31-88-89
+   59  hostname
+   60  ifconfig
+   61  sudo systemctl restart sshd
+   62  ansible-playbook tomcat-server.yml 
+   63  ansible-playbook tomcat-server.retry 
+   64  ansible-playbook tomcat-server.yml 
+   65  ansible-playbook tomcat-server.retry 
+   66  root
+   67  cd
+   68  pwd
+   69  ifconfig
+   70  ping google.com
+   71  telnet 172-31-88-89 22
+   72  telnet 172.31.88.89 22
+   73  ssh ansible@172.31.88.89
+   74  cat /etc/os-release 
+   75  ansible-playbook tomcat-server.yml 
+   76  tomcat-inventory
+   77  vim tomcat-inventory
+   78  sudo vim myinventory
+   79  ls
+   80  ansible-playbook tomcat-server.yml -i /home/ansible/myinventory tomcatservers
+   81  ansible-playbook tomcat-server.yml -i /home/ansible/myinventory all
+   82  ansible -m ping -i /home/ansible/myinventory all
+   83  sudo ansible-playbook tomcat-server.yml -i /home/ansible/myinventory all
+   84  sudo ansible-playbook tomcat-server.yml -i /home/ansible/myinventory 
+   85  vim apache.yml
+   86  ansible-playbook apache.yml 
+   87  vim apache.yml
+   88  ansible-playbook apache.yml 
+   89  cat apache.retry 
+   90  vim apache.yml
+   91  ansible-playbook apache.yml 
+   92  vim apache.yml
+   93  ansible-playbook apache.yml 
+   94  ansible-playbook apache.retry 
+   95  sudo /etc/hosts
+   96  ansible-playbook apache.yml 
+   97  ansible ip-172-31-88-89.ec2.internal
+   98  ssh ip-172-31-88-89.ec2.internal
+   99  ssh 172.31.88.89
+  100  scp -r apache.yml ansible@172.31.88.89:/home/ansible
+  101  ansible-playbook apache.yml --ignore-fatal_error
+  102  ansible-playbook apache.yml 
+  103  ansible-playbook tomcat-server.yml 
+  104  ansible -i myinventory all -m ping
+  105  ansible -i myinventory all -a "grep ^root: /etc/shadow"
+  106  ansible -i myinventory all -a "grep ^root: /etc/shadow" -b
+  107  ansible -i myinventory all -a "grep ^root: /etc/shadow" -b -k
+  108  sudo visudo
+  109  ansible -i myinventory all -a "grep ^root: /etc/shadow" -b
+  110  ansible -i myinventory all -a "grep ^root: /etc/shadow" -b -k
+  111  ansible-playbook apache.yml 
+  112  vim apache.yml 
+  113  ansible-playbook apache.yml 
+  114  vim apache.yml 
+  115  ansible-playbook apache.yml 
+  116  sudo vim /etc/resolv.conf 
+  117  sudo yum update
+  118  sudo yum install net-tools
+  119  sudo yum install gedit
+  120  ping google.com
+  121  ls
+  122  yum install git
+  123  sudo yum install git
+  124  sudo vim  /etc/resolv.conf 
+  125  ls
+  126  mkdir playbooks
+  127  ls
+  128  vim myfirstplaybook.yml
+  129  ansible-playbook myfirstplaybook.yml 
+  130  ansible -m apt all
+  131  ansible -m apt tomcatservers
+  132  ansible -m apt --become tomcatservers
+  133  ansible -m apt  tomcatservers -K
+  134  ansible -m apt  all  -K
+  135  vim apache.yml 
+  136  ansible-playbook apache.yml -K
+  137  ansible-playbook tomcat-server.yml -K
+  138  vim apache.yml 
+  139  ansible-playbook apache.yml -K
+  140  vim tomcat-setup.yml
+  141  ansible-playbook tomcat-setup.yml -K
+  142  ansible-playbook -i hosts tomcat-setup.yml
+  143  vim tomcat-setup.yml
+  144  ansible-playbook -i hosts tomcat-setup.yml
+  145  cat tomcat-setup.yml 
+  146  vim tomcat-setup2.yml
+  147  ansible-playbook tomcat-setup2.yml -K
+  148  vim tomcat-setup-RedHat.yml
+  149  ansible-playbook tomcat-setup-RedHat.yml 
+  150  ansible-playbook tomcat-setup-RedHat.yml -K
+  151  vim tomcat-setup-RedHat.yml
+  152  ansible-playbook tomcat-setup-RedHat.yml -K
+  153  vim tomcat-setup-RedHat.yml
+  154  ansible-playbook tomcat-setup-RedHat.yml -K
+  155  vim tomcat-setup-RedHat.yml
+  156  ansible-playbook tomcat-setup-RedHat.yml -K
+  157  vim tomcat-setup-RedHat.yml
+  158  ansible-playbook tomcat-setup-RedHat.yml -K
+  159  ansible-playbook tomcat-setup-RedHat.yml 
+  160  ansible -m yum -i hosts all
+  161  ansible -m yum all
+  162  ansible -m yum tomcatservers
+  163  vim user.yml
+  164  ansible-playbook user.yml 
+  165  vim user.yml
+  166  ansible-playbook user.yml 
+  167  ansible 
+  168  ansible -m command -a "cat /etc/motd" tomcatservers
+  169  ansible -m raw -a "cat /etc/motd" tomcatservers
+  170  ansible -m raw -a "cat /etc/motd" tomcatservers -vv
+  171  ansible -m command -a "cat /etc/motd" tomcatservers -vv
+  172  ansible -m command -a "cat /etc/motd" tomcatservers -v
+  173  ansible -m command -a "cat /etc/motd" tomcatservers -vv
+  174  ansible -m command -a "cat /etc/motd" tomcatservers -vvv
+  175  ansible -m ping -a "cat /etc/motd" tomcatservers -vvv
+  176  ansible -m raw -a "cat /etc/motd" tomcatservers -vvv
+  177  ansible -m command -a "cat /etc/motd" tomcatservers -vvv
+  178  ansible
+  179  ansible -m setup tomcatservers
+  180  ansible -m setup all
+  181  ansible -m setup localhost
+  182  vim copy.yml
+  183  ls
+  184  vim copy.yml
+  185  ansible -vvv copy.yml tomcatservers
+  186  ansible-playbook  -vvv copy.yml tomcatservers
+  187  vim copy.yml
+  188  sudo cat /etc/ansible/hosts 
+  189  ansible-playbook  -vvv copy.yml -i myinventory 
+  190  vim copy.yml
+  191  ls
+  192  vim copy.yml
+  193  ansible-playbook  -vvv copy.yml -i myinventory 
+  194  vim copy.yml
+  195  cat apache.retry 
+  196  vim url.yml
+  197  ansible-playbook -vvv url.yml tomcatservers
+  198  ansible-playbook -vvv url.yml -i myinventory 
+  199  vim url.yml
+  200  ansible-playbook -vvv url.yml -i myinventory 
+  201  vim url.yml
+  202  ansible-playbook -vvv url.yml -i myinventory 
+  203  vim url.yml
+  204  ansible-playbook -vvv url.yml -i myinventory 
+  205  ansible -m setup -a "filter=ansible_os*" myinventory 
+  206  ansible -m setup -a "filter=ansible_os*" all
+  207  ansible -m setup -a "filter=ansible_s*" all
+  208  vim  when.yml
+  209  sudo ssh-copy-id ansible@ip-172-31-35-78
+  210  sudo ssh-copy-id ansible@172.31.35.78 
+  211  ssh-copy-id ansible@172.31.35.78 
+  212  ssh 172.31.35.78 
+  213  vim myinventory 
+  214  ansible -m ping -i myinventory 
+  215  sudo vim /etc/ansible/hosts 
+  216  ansible -m ping -i all
+  217  ansible -m ping -i tomcatservers
+  218  ansible -m ping tomcatservers
+  219  ansible -m setup -a "ansible_os_d" tomcatservers
+  220  ansible -m setup -a "ansible_os*" tomcatservers
+  221  ansible-playbook when.yml -K
+  222  vim  when.yml
+  223  ansible-playbook when.yml -K
+  224  vim  when.yml
+  225  ansible-playbook when.yml 
+  226  ansible-playbook when.yml -k
+  227  ansible-playbook when.yml -K
+  228  vim  when.yml
+  229  cat when.retry 
+  230  vim  when.yml
+  231  ansible-playbook when.yml -K
+  232  histroy
+  233  sudo yum install history
+  234  ls
+  235  man history
+  236  history
+  237  history >> ansible-commands1.txt

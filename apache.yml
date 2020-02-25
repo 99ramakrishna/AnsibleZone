@@ -1,0 +1,10 @@
+---
+- hosts: tomcatservers
+  become: yes
+  #gather_facts: false
+
+  tasks:
+
+    
+    - name: install apache2
+      yum: name=httpd state=present

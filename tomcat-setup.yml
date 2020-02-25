@@ -1,0 +1,16 @@
+--- 
+- 
+  become: true
+  become_method: sudo
+  hosts: tomcatservers
+  name: "Tomcat deployment playbook"
+  remote_user: ansible
+  roles: 
+    - tomcat
+  vars: 
+    tomcat_ver: "9.0.30"
+    ui_admin_pass: Str0ngAdminP@ssw3rd
+    ui_admin_username: admin
+    ui_manager_pass: Str0ngManagerP@ssw3rd
+    ui_manager_user: manager
+

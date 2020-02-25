@@ -1,0 +1,9 @@
+---
+- hosts: tomcatservers
+  become: yes
+  gather_facts: no
+ 
+  tasks:
+    - get_url:
+        url: http://mirrors.jenkins.io/war-stable/latest/jenkins.war
+        dest: /home/ansible/jenkins.war

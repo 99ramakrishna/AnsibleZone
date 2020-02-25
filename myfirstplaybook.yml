@@ -1,0 +1,6 @@
+---
+- hosts: all
+  tasks:
+  #ansible -m pin all
+   - name: ping to all servers
+     ping:

@@ -1,0 +1,13 @@
+---
+- hosts: tomcatservers
+  become: yes
+  gather_facts: no
+  tasks:
+    - copy:
+        src: /home/ansible/apache.retry 
+        dest: /home/ansible/ansiblezone
+
+    - htpasswd:
+        path: /home/ansible/passwordfile
+        name: rama
+        password: 'root'
