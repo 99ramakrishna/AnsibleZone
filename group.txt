@@ -3,16 +3,16 @@
   become: yes
   tasks:
 
-    - name: Add the user 'johnd' with a specific uid and a primary group of 'admin'
+    - name: Add the user 'rama' with a specific uid and a primary group of 'admin'
       user:
-        name: johnd
-        comment: John Doe
+        name: rama
+        comment: rama Doe
         uid: 1040
         group: admin
 
     - name: Add the user 'james' with a bash shell, appending the group 'admins' and 'developers' to the user's groups
       user:
-        name: james
+        name: krishna
         shell: /bin/bash
         groups: admins,developers
         append: yes
