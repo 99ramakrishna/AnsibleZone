@@ -1,0 +1,14 @@
+---
+- hosts: tomcatservers
+  sudo: yes
+  gather_facts: false
+
+  tasks:
+
+    - name: Fail task when the command error output prints FAILED
+      command: /usr/bin/example-command -x -y -z
+      register: command_result
+      failed_when: "'FAILED' in command_result.stderr"
+    
+     - name: update packages
+      name=httpd state=present

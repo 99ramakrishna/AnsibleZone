@@ -1,0 +1,99 @@
+
+
+Modules:
+
+yum
+  name: 
+  state: present
+
+apt
+  name:
+  state
+
+service
+  name: 
+  state: reloaded
+
+copy
+  src: path/local/from
+  dest
+
+get_url:
+  url: urllink
+  dest: path/remote/to
+
+when: ansible_os_family == "Redhat"
+
+command: apt-get update
+  register: command result
+debug:
+  msg:  "{{ command result }}"
+notify:
+ - restart apache
+handler:
+- name: 
+  service:
+    name: 
+    state: 
+
+listen:
+
+
+ping
+raw
+
+
+user:
+  name:
+  state:
+ 
+
+group: 
+  name:
+  state:
+
+
+script:
+
+
+shell
+
+check_mode:
+
+vars_prompt:
+
+  - name: "my_password2"
+    prompt: "Enter password2"
+    private: yes
+    encrypt: "sha512_crypt"
+    confirm: yes
+    salt_size: 7
+
+
+unarchive
+
+
+lineinfile:
+    path: /opt/jboss-as/bin/standalone.conf
+    regexp: '^(.*)Xms(\\d+)m(.*)$'
+    line: '\1Xms${xms}m\3'
+    backrefs: yes
+- name: Create two hard links
+  file:
+    src: '/tmp/{{ item.src }}'
+    dest: '{{ item.dest }}'
+    state: hard
+
+
+
+Htpasswd
+
+with_items: ["","",""]
+   
+
+--------------------------------------------------------------------------
+
+handler:
+   
+      for re-usable restart services
+      
