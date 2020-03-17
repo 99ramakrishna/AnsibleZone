@@ -1,0 +1,10 @@
+localhost
+
+ip-172-31-94-0
+ip-172-31-43-14.ec2.internal
+
+[redhat]
+ip-172-31-43-14.ec2.internal
+
+[ubuntu]
+ip-172-31-94-0

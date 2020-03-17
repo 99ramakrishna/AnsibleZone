@@ -1,0 +1,13 @@
+---
+- hosts: redhat
+  become: yes
+  gather_facts: yes
+  tasks:
+    - name: create a file with content
+      copy:
+        dest: "/home/ansible/.bashrc"
+        content: |
+         
+            export JAVA_HOME=
+            export M2_HOME=
+            export PATH=${JAVA_HOME}/bin:${M2_HOME}/bin:${PATH}/bin

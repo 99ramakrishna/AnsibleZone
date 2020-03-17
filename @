@@ -1,0 +1,14 @@
+---
+- hosts: ip-172-31-43-14.ec2.internal
+  gather_facts: true
+  tasks: 
+    - name: Install maven in redhat
+      shell: | 
+        sudo yum install java-1.8.0-openjdk-devel -y
+        sudo yum install maven -y
+        java -version
+        mvn -version        
+      register: shell_result
+      debug:
+        msg: shell_result.stdout 
+

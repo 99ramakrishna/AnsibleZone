@@ -1,0 +1,15 @@
+---
+- hosts: all 
+  gather_facts: true
+  tasks:
+  - name: install packages
+    command: hostname -f
+    register: cmd_content
+  - name: print command result
+    debug: 
+      msg: "{{ cmd_content.stdout  }}"
+    when: cmd_content.stderr == ""
+  - name: if print command error present
+    debug:
+      msg: "{{  cmd_content.stderr  }}"
+    when: cmd_content.stderr != ""

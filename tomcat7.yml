@@ -1,0 +1,30 @@
+---
+- hosts: redhat
+  become: yes
+  gather_facts: false
+  tasks:
+ # - name: installing tomcat defferent version by using variables
+ #   apt:
+ #     name: "{{ packagename  }}"
+ #     state: present
+ #     update_cache: yes
+ #     notify: restart tomcat
+ #   when: ansible_os_family == "Debian"
+   - name: on redhat
+     yum:
+       name: "{{  packagename  }}"
+       state: present
+       notify: restrted tomcat
+     when: ansible_os_family == "RedHat"
+
+   - name: coping
+     copy:
+        src: /home/ansible/hosts-inv
+        dest: /home/ansible/myhostsinvcopied
+        notify: restart tomcat
+
+     handlers:
+   - name: restart tomcat
+     service: 
+        name: "{{ packagename  }}"
+        state: restarted 

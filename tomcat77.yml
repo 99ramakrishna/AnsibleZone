@@ -1,0 +1,25 @@
+--- 
+- 
+  become: true
+  gather_facts: false
+  handlers: 
+    - 
+      name: "restart tomcat"
+      service: 
+        name: "{{ packagename  }}"
+        state: restarted
+  hosts: ubuntu
+  tasks: 
+    - 
+      apt: 
+        name: "{{ packagename  }}"
+        notify: "restart tomcat"
+        state: present
+        update_cache: true
+      name: "installing tomcat defferent version by using variables"
+    - 
+      copy: 
+        dest: /home/ansible/myhostsinvcopied
+        notify: "restart tomcat"
+        src: /home/ansible/hosts-inv
+
