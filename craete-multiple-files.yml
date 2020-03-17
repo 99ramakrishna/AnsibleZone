@@ -1,0 +1,15 @@
+---
+- hosts: redhat
+  become: yes
+  gather_facts: true
+  tasks:
+    - name: craete multiple files are  system.log network.log disk.log
+      file:
+        path: "/home/ansible{{ item   }}"
+        state: touch
+        mode: 0777
+        owner: root
+      with_items:
+      - system.log
+      - network.log
+~                   
