@@ -1,0 +1,35 @@
+###################################  Ansible ###########################################
+
+
+ansible -m module -a " argument value" hostsentry -vvv -s -K
+ansble -m module -a "argument value" hostsentry -i inventorypath 
+ansible-playbook playbook.yml --sysntax-check 
+ansible-playbook playbook.yml --private-key=key.pem	
+
+*************************** Ansible Tags **************************************************************************************************************
+--tags ""
+--skip-tags ""
+
+ansible-playbook git_install.yml --skip-tags "tagsname"
+
+------------->
+-name:
+ shell: |
+   wget 
+   sed
+   yum   
+------------->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>|
+sudo wget http://repos.fedorapeople.org/repos/dchen/apache-maven/epel-apache-maven.repo -O /etc/yum.repos.d/epel-apache-maven.repo
+
+--> sudo sed -i s/\$releasever/6/g /etc/yum.repos.d/epel-apache-maven.repo
+
+-->sudo yum install -y apache-maven
+                                                         |
+--> mvn --version                                        |
+**********************************************************
+**************************************** Anible Roles/Galaxy/Tower ***********************************************************************************
+
+Ansible Galaxy 
+             is a Hub like docker hub and it contains playbooks like docker images.
+
+ansinle-galaxy install playbookname---> like docker pull command.
