@@ -1,0 +1,12 @@
+---
+- hosts: redhat
+  become: yes
+  gather_facts: yes
+  tasks:
+    - name: change file permissions
+      file:
+        path: "/home/ansible/newfile"
+        state: touch
+        mode: 0666
+        owner: root
+
